@@ -1,5 +1,31 @@
 #include "Online.h"
 
+// -----------------------------------------
+// CLIENT
+// -----------------------------------------
+
+void Online::Client::Init(std::string _ip, short _port)
+{
+	ip = _ip;
+	port = _port;
+}
+
+void Online::Client::Run(CommunicationMode mode)
+{
+	switch (mode)
+	{
+	case Online::BLOCKING: {
+		socket.connect(ip, port);
+	}
+						   break;
+	case Online::NONBLOCKING: {
+
+	}
+							  break;
+	default:
+		break;
+	}
+}
 
 // -----------------------------------------
 // SERVER
@@ -58,12 +84,9 @@ void Online::Server::ThreadListen()
 void Online::Server::ManageSocket(int sockIndex)
 {
 	sf::TcpSocket &sock = *sockets[sockIndex];
-	//sf::Packet packet;
-
-	//while (1) {
-	//	std::cout << "Receiving..." << std::endl;
-	//	sock.receive(packet);
-	//}
+	sf::Packet packet;
+	sock.receive(packet);
+	std::cout << packet << std::endl;
 }
 
 sf::TcpSocket & Online::Server::LastSocket()
@@ -82,31 +105,4 @@ sf::TcpSocket & Online::Server::GenerateSocket()
 	sockets.push_back(new sf::TcpSocket());
 	return *sockets.back();
 	// TODO: insertar una instrucción return aquí
-}
-
-// -----------------------------------------
-// CLIENT
-// -----------------------------------------
-
-void Online::Client::Init(std::string _ip, short _port)
-{
-	ip = _ip;
-	port = _port;
-}
-
-void Online::Client::Run(CommunicationMode mode)
-{
-	switch (mode)
-	{
-	case Online::BLOCKING: {
-		socket.connect(ip, port);
-	}
-		break;
-	case Online::NONBLOCKING: {
-
-	}
-		break;
-	default:
-		break;
-	}
 }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ENTI_Networking", "ENTI_Networking\ENTI_Networking.vcxproj", "{3BDDF200-7E90-4D82-A304-39D6510BDA82}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcxproj", "{3BDDF200-7E90-4D82-A304-39D6510BDA82}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{4DB71AF4-0000-4160-A952-C0DC983A3D8D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Online", "Online\Online.vcxproj", "{8214418D-4259-4489-B3DD-E64CDA46D93B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{3BDDF200-7E90-4D82-A304-39D6510BDA82}.Release|x64.Build.0 = Release|x64
 		{3BDDF200-7E90-4D82-A304-39D6510BDA82}.Release|x86.ActiveCfg = Release|Win32
 		{3BDDF200-7E90-4D82-A304-39D6510BDA82}.Release|x86.Build.0 = Release|Win32
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Debug|x64.ActiveCfg = Debug|x64
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Debug|x64.Build.0 = Debug|x64
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Debug|x86.ActiveCfg = Debug|Win32
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Debug|x86.Build.0 = Debug|Win32
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Release|x64.ActiveCfg = Release|x64
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Release|x64.Build.0 = Release|x64
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Release|x86.ActiveCfg = Release|Win32
+		{4DB71AF4-0000-4160-A952-C0DC983A3D8D}.Release|x86.Build.0 = Release|Win32
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Debug|x64.ActiveCfg = Debug|x64
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Debug|x64.Build.0 = Debug|x64
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Debug|x86.ActiveCfg = Debug|Win32
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Debug|x86.Build.0 = Debug|Win32
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Release|x64.ActiveCfg = Release|x64
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Release|x64.Build.0 = Release|x64
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Release|x86.ActiveCfg = Release|Win32
+		{8214418D-4259-4489-B3DD-E64CDA46D93B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

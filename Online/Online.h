@@ -7,7 +7,15 @@
 namespace Online {
 	
 	enum CommunicationMode {BLOCKING, NONBLOCKING};
-
+	class Client {
+	public:
+		void Init(std::string _ip, short _port);
+		void Run(CommunicationMode mode);
+	private:
+		std::string ip;
+		short port;
+		sf::TcpSocket socket;
+	};
 	class Server {
 	public:
 		Server();
@@ -30,15 +38,5 @@ namespace Online {
 
 		sf::TcpListener listener;
 		std::vector<sf::TcpSocket*> sockets;
-	};
-
-	class Client {
-	public:
-		void Init(std::string _ip, short _port);
-		void Run(CommunicationMode mode);
-	private:
-		std::string ip;
-		short port;
-		sf::TcpSocket socket;
 	};
 }
